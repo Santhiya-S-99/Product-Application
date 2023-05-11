@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <h1 style="text-align:center;">Displaying Data from an API</h1>
+  <button class="btn btn-primary btn-lg" type="button" (click)="tableToCSV()">Download</button>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th class="table_width">Description</th>
+        <th>Price</th>
+        <th class="table_width">Discount Percentage</th>
+        <th class="col_width">Rating</th>
+        <th class="col_width">Stock</th>
+        <th class="col_width">Brand</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let item of myData.products| paginate: {itemsPerPage: tableSize,currentPage: page,totalItems: count};">
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.discountPercentage}}</td>
+        <td>{{item.rating}}</td>
+        <td>{{item.stock}}</td>
+        <td>{{item.brand}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <pagination-controls style="text-align:center;" previousLabel="Prev" nextLabel="Next"
+    (pageChange)="onTableDataChange($event)"></pagination-controls>
+</div>

@@ -1,0 +1,82 @@
+.container-fluid {
+    margin-top: 10px !important;
+    margin: 50px;
+    font-size: 20px;
+}
+
+.table_width {
+    width: 23%;
+}
+
+.col_width {
+    width: 10%;
+}
+
+.btn {
+    border: none;
+    background-color: #000aff;
+    margin-bottom: 2%;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #e1eff385;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fbfcfd;
+}
+
+.table-bordered thead tr {
+    background-color: #e1eff385;
+    color: #000aff;
+}
+
+:host::ng-deep .ngx-pagination .current {
+    background: #000aff;
+    border-radius: 5px;
+}
+
+a:focus,
+a:hover {
+    color: #000aff;
+    text-decoration: none;
+}
+
+.table>tbody>tr>td {
+    border-top: none;
+}
+
+.table>thead>tr>th {
+    border-bottom: none;
+}
+
+.table-bordered>thead>tr>th {
+    border: none;
+}
+
+.table-bordered>tbody>tr>td {
+    border: none;
+}
+
+.table-bordered {
+    border: none;
+}
+
+:host::ng-deep .ngx-pagination a:hover,
+.ngx-pagination button:hover {
+    background: #e6e6e6;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.primary:active:focus {
+    color: #fff;
+    background-color: #000aff;
+    border-color: none;
+}
+
+.btn:active:focus,
+.btn:focus {
+    outline: none;
+    outline-offset: 0px;
+}
